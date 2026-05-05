@@ -1,8 +1,1287 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>URL</key>
-	<string>https://cloudhumans.slack.com/files/U039R8BBB9P/F0B1PBB6YG6/faq_onlypay.html?origin_team=T0179KTSH0E&amp;origin_channel=D0AHERWULLB</string>
-</dict>
-</plist>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Central de Ajuda OnlyPay — FAQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafaf7;
+    --surface: #ffffff;
+    --surface-2: #f4f3ee;
+    --ink: #1a1a1a;
+    --ink-soft: #5a5a5a;
+    --ink-mute: #8a8a8a;
+    --line: #e6e4dd;
+    --accent: #2d5a3d;
+    --accent-soft: #e8f0ea;
+    --warn: #b8631a;
+    --warn-soft: #fbf1e3;
+    --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.04);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter Tight', -apple-system, system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ========== HEADER ========== */
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    padding: 56px 0 48px;
+  }
+  .header-inner { max-width: 760px; }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+  .tagline {
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 560px;
+    margin-bottom: 32px;
+  }
+
+  /* ========== SEARCH ========== */
+  .search-wrap {
+    position: relative;
+    max-width: 560px;
+  }
+  .search-wrap svg {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--ink-mute);
+  }
+  #search {
+    width: 100%;
+    padding: 16px 18px 16px 50px;
+    font-family: inherit;
+    font-size: 16px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    color: var(--ink);
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  #search:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+
+  /* ========== LAYOUT ========== */
+  main {
+    padding: 48px 0 96px;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 56px;
+  }
+
+  /* ========== SIDEBAR ========== */
+  nav.sidebar {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+  }
+  .sidebar-title {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    font-weight: 600;
+    margin-bottom: 14px;
+    padding-left: 12px;
+  }
+  .sidebar ul { list-style: none; }
+  .sidebar a {
+    display: block;
+    padding: 9px 12px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 6px;
+    border-left: 2px solid transparent;
+    transition: all 0.15s;
+  }
+  .sidebar a:hover {
+    color: var(--ink);
+    background: var(--surface-2);
+  }
+  .sidebar a.active {
+    color: var(--accent);
+    border-left-color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* ========== CONTENT ========== */
+  .content { min-width: 0; }
+
+  section.category {
+    margin-bottom: 64px;
+    scroll-margin-top: 24px;
+  }
+  .category-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--line);
+  }
+  .category-icon {
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  /* ========== FAQ ITEMS ========== */
+  .faq {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--surface);
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .faq:hover { border-color: #d8d6cf; }
+  .faq[open] {
+    border-color: var(--accent);
+    box-shadow: var(--shadow);
+  }
+  .faq summary {
+    padding: 18px 22px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-weight: 500;
+    color: var(--ink);
+    user-select: none;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: '+';
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    color: var(--ink-mute);
+    transition: transform 0.2s;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .faq[open] summary::after {
+    content: '−';
+    color: var(--accent);
+  }
+  .faq-body {
+    padding: 0 22px 22px;
+    color: var(--ink-soft);
+    font-size: 15px;
+  }
+  .faq-body p { margin-bottom: 12px; }
+  .faq-body p:last-child { margin-bottom: 0; }
+  .faq-body ul, .faq-body ol {
+    padding-left: 22px;
+    margin-bottom: 12px;
+  }
+  .faq-body li { margin-bottom: 6px; }
+  .faq-body strong { color: var(--ink); font-weight: 600; }
+  .faq-body a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .faq-body code {
+    background: var(--surface-2);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: 'SF Mono', Menlo, monospace;
+  }
+
+  /* Tabela de tarifas */
+  .tariff-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  .tariff-table th, .tariff-table td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  .tariff-table th {
+    background: var(--surface-2);
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .tariff-table tr:last-child td { border-bottom: none; }
+
+  /* Notas e atenção */
+  .note {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  .warn {
+    background: var(--warn-soft);
+    border-left: 3px solid var(--warn);
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  .note strong, .warn strong { color: var(--ink); }
+
+  /* Sem resultados */
+  .no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--ink-mute);
+    display: none;
+  }
+  .no-results.show { display: block; }
+  .no-results h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    color: var(--ink);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 32px 0;
+    color: var(--ink-mute);
+    font-size: 13px;
+    text-align: center;
+  }
+
+  /* Hidden state */
+  .hidden { display: none !important; }
+
+  /* Search highlight */
+  mark {
+    background: #fff3a3;
+    color: var(--ink);
+    padding: 1px 2px;
+    border-radius: 2px;
+  }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 860px) {
+    main {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    nav.sidebar {
+      position: static;
+      max-height: none;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .sidebar ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .sidebar a { padding: 6px 12px; border-left: none; border-radius: 100px; }
+    .sidebar a.active { background: var(--accent-soft); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="eyebrow">Central de Ajuda · OnlyPay</div>
+    <h1>Como podemos ajudar você?</h1>
+    <p class="tagline">Encontre respostas para as dúvidas mais comuns sobre seu cartão, app, resgate de pontos e muito mais.</p>
+    <div class="search-wrap">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <path d="m21 21-4.3-4.3"></path>
+      </svg>
+      <input type="text" id="search" placeholder="Busque por cartão, senha, TED, boleto…" autocomplete="off">
+    </div>
+  </div>
+</header>
+
+<div class="container">
+<main>
+
+  <nav class="sidebar">
+    <div class="sidebar-title">Categorias</div>
+    <ul id="nav-list">
+      <li><a href="#cartoes" data-target="cartoes">Cartões OnlyPay</a></li>
+      <li><a href="#receber" data-target="receber">Como receber o cartão</a></li>
+      <li><a href="#app" data-target="app">App e primeiro acesso</a></li>
+      <li><a href="#desbloqueio" data-target="desbloqueio">Desbloqueio e senha</a></li>
+      <li><a href="#saldo" data-target="saldo">Saldo e despesas</a></li>
+      <li><a href="#operacoes" data-target="operacoes">TED, boletos e recargas</a></li>
+      <li><a href="#problemas" data-target="problemas">Problemas com o cartão</a></li>
+      <li><a href="#cadastro" data-target="cadastro">Dados cadastrais</a></li>
+      <li><a href="#pontos" data-target="pontos">Plataformas de pontos</a></li>
+      <li><a href="#presentes" data-target="presentes">Only Presentes</a></li>
+      <li><a href="#tecnico" data-target="tecnico">Suporte técnico</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <div id="results-msg" class="no-results">
+      <h3>Nenhum resultado encontrado</h3>
+      <p>Tente outras palavras-chave ou navegue pelas categorias acima.</p>
+    </div>
+
+    <!-- ========== CARTÕES ========== -->
+    <section class="category" id="cartoes">
+      <div class="category-header">
+        <span class="category-icon">01</span>
+        <h2>Cartões OnlyPay</h2>
+      </div>
+
+      <details class="faq">
+        <summary>Quais tipos de cartão a OnlyPay oferece?</summary>
+        <div class="faq-body">
+          <p>A OnlyPay oferece cartões digitais e físicos, em modalidades para Pessoa Física (PF) e Pessoa Jurídica (PJ), com variações de "Compra" e "Compra e Saque":</p>
+          <ul>
+            <li><strong>Cartão Digital sem Personalização</strong> — para compras online, carteiras digitais (Uber, iFood, etc.), recarga de celular e pagamento de boletos.</li>
+            <li><strong>Cartão PJ Compra e Saque</strong> — para empresas (CNPJ), inclui TED e saques em caixa 24h.</li>
+            <li><strong>Cartão PF Compra e Saque</strong> — para pessoa física (CPF), inclui TED e saques em caixa 24h.</li>
+            <li><strong>Cartão PJ Compra</strong> e <strong>Cartão PF Compra</strong> — apenas compras, recarga e boletos (sem TED ou saque).</li>
+            <li><strong>Cartões físicos personalizados</strong> — disponíveis para clientes específicos como Corteva, Lidera, SOMOS, Pro Shows e HOYA.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Quais são as tarifas e limites do Cartão Digital sem Personalização?</summary>
+        <div class="faq-body">
+          <table class="tariff-table">
+            <tr><th>Item</th><th>Valor</th></tr>
+            <tr><td>Limite TED por dia</td><td>R$ 10.000,00</td></tr>
+            <tr><td>Limite TED por mês</td><td>R$ 50.000,00</td></tr>
+            <tr><td>Limite de compra por dia</td><td>R$ 2.000,00</td></tr>
+            <tr><td>Pagamento de boletos</td><td>R$ 30.000,00</td></tr>
+            <tr><td>Tarifa de mensalidade</td><td>R$ 4,00</td></tr>
+            <tr><td>Tarifa boleto</td><td>R$ 1,00</td></tr>
+          </table>
+          <div class="note"><strong>Atenção:</strong> as taxas se aplicam apenas aos cartões digitais OnlyPay sem personalização. Para cartões personalizados, verifique a taxa específica de cada cliente. TED disponível depende da configuração do cliente — sempre confirmar caso a caso.</div>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Quais são as tarifas e limites do Cartão PJ (Compra e Saque)?</summary>
+        <div class="faq-body">
+          <p>Cartão para empresas (CNPJ) que realiza compras online, pagamento em carteiras digitais, recarga de celular, boletos, TED e saques em caixa 24h.</p>
+          <table class="tariff-table">
+            <tr><th>Item</th><th>Valor</th></tr>
+            <tr><td>Limite TED por dia</td><td>R$ 10.000,00</td></tr>
+            <tr><td>Limite TED por mês</td><td>R$ 50.000,00</td></tr>
+            <tr><td>Limite compras físicas/dia</td><td>R$ 10.000,00</td></tr>
+            <tr><td>Limite compras online/dia</td><td>R$ 2.000,00</td></tr>
+            <tr><td>Pagamento de boletos</td><td>R$ 30.000,00</td></tr>
+            <tr><td>Tarifa de mensalidade</td><td>R$ 8,00</td></tr>
+            <tr><td>Tarifa boleto</td><td>R$ 1,00</td></tr>
+            <tr><td>Tarifa TED</td><td>R$ 5,00</td></tr>
+            <tr><td>Tarifa saque</td><td>R$ 9,50</td></tr>
+            <tr><td>Tarifa saque negada</td><td>R$ 3,50</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Quais são as tarifas e limites do Cartão PF (Compra e Saque)?</summary>
+        <div class="faq-body">
+          <p>Cartão para pessoa física (CPF) que realiza compras online, pagamento em carteiras digitais, recarga de celular, boletos, TED e saques em caixa 24h.</p>
+          <table class="tariff-table">
+            <tr><th>Item</th><th>Valor</th></tr>
+            <tr><td>Limite TED por dia</td><td>R$ 10.000,00</td></tr>
+            <tr><td>Limite TED por mês</td><td>R$ 50.000,00</td></tr>
+            <tr><td>Limite compras físicas/dia</td><td>R$ 10.000,00</td></tr>
+            <tr><td>Limite compras online/dia</td><td>R$ 2.000,00</td></tr>
+            <tr><td>Pagamento de boletos</td><td>R$ 30.000,00</td></tr>
+            <tr><td>Tarifa de mensalidade</td><td>R$ 4,00</td></tr>
+            <tr><td>Tarifa boleto</td><td>R$ 1,00</td></tr>
+            <tr><td>Tarifa TED</td><td>R$ 5,00</td></tr>
+            <tr><td>Tarifa saque</td><td>R$ 9,50</td></tr>
+            <tr><td>Tarifa saque negada</td><td>R$ 3,50</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Quais são as tarifas e limites dos cartões só de Compra (PF e PJ)?</summary>
+        <div class="faq-body">
+          <p>Cartões PF e PJ na modalidade "Compra" realizam compras online, recarga de celular e pagamento de boletos (sem TED nem saque).</p>
+          <table class="tariff-table">
+            <tr><th>Item</th><th>PF Compra</th><th>PJ Compra</th></tr>
+            <tr><td>Limite compras físicas/dia</td><td>R$ 10.000,00</td><td>R$ 10.000,00</td></tr>
+            <tr><td>Limite compras online/dia</td><td>R$ 2.000,00</td><td>R$ 2.000,00</td></tr>
+            <tr><td>Pagamento de boletos</td><td>R$ 30.000,00</td><td>R$ 30.000,00</td></tr>
+            <tr><td>Tarifa de mensalidade</td><td>R$ 4,00</td><td>R$ 8,00</td></tr>
+            <tr><td>Tarifa boleto</td><td>R$ 1,00</td><td>R$ 1,00</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Tarifas dos cartões personalizados Corteva, Lidera e SOMOS (Compra)</summary>
+        <div class="faq-body">
+          <p>Cartões personalizados PF ou PJ na modalidade Compra: realizam compras online, recarga de celular e pagamento de boletos de consumo.</p>
+          <table class="tariff-table">
+            <tr><th>Item</th><th>Valor</th></tr>
+            <tr><td>Limite compra/dia</td><td>R$ 20.000,00</td></tr>
+            <tr><td>Pagamento de boletos</td><td>R$ 30.000,00</td></tr>
+            <tr><td>2ª via de cartão</td><td>R$ 32,00</td></tr>
+            <tr><td>Tarifa de mensalidade</td><td>R$ 4,00</td></tr>
+            <tr><td>Tarifa boleto</td><td>R$ 1,00</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Tarifas e limites dos cartões Pro Shows e HOYA (Compra e Saque)</summary>
+        <div class="faq-body">
+          <p>Cartões PF personalizados, com compras online, carteiras digitais, recarga, boletos, TED e saques em caixa 24h.</p>
+          <table class="tariff-table">
+            <tr><th>Item</th><th>Valor</th></tr>
+            <tr><td>TED dia</td><td>R$ 10.000,00</td></tr>
+            <tr><td>TED mês</td><td>R$ 30.000,00</td></tr>
+            <tr><td>Limite compras físicas/dia</td><td>R$ 10.000,00</td></tr>
+            <tr><td>Limite compras online/dia</td><td>R$ 2.000,00</td></tr>
+            <tr><td>Pagamento de boletos</td><td>R$ 30.000,00</td></tr>
+            <tr><td>Tarifa de mensalidade</td><td>R$ 4,00</td></tr>
+            <tr><td>Tarifa boleto</td><td>R$ 1,00</td></tr>
+            <tr><td>Tarifa TED</td><td>R$ 5,00</td></tr>
+            <tr><td>Tarifa saque</td><td>R$ 9,50</td></tr>
+            <tr><td>Tarifa saque negada</td><td>R$ 3,50</td></tr>
+          </table>
+        </div>
+      </details>
+    </section>
+
+    <!-- ========== RECEBER ========== -->
+    <section class="category" id="receber">
+      <div class="category-header">
+        <span class="category-icon">02</span>
+        <h2>Como receber o cartão</h2>
+      </div>
+
+      <details class="faq">
+        <summary>Como recebo o Cartão Digital?</summary>
+        <div class="faq-body">
+          <p>Você receberá um e-mail com um <strong>código alfanumérico</strong> informando que ganhou um cartão digital OnlyPay. Em seguida, siga o passo a passo:</p>
+          <ol>
+            <li>Baixe o app <strong>OnlyPay</strong> (Google Play ou App Store);</li>
+            <li>Clique em <strong>"Desbloquear seu cartão"</strong>;</li>
+            <li>Selecione a opção <strong>"Cartão Digital"</strong>;</li>
+            <li>Insira o código recebido por e-mail.</li>
+          </ol>
+          <div class="note"><strong>Importante:</strong> o cartão será carregado em até <strong>48 horas úteis</strong> após o desbloqueio.</div>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Como recebo o Cartão Físico?</summary>
+        <div class="faq-body">
+          <p>A empresa responsável pela campanha (cliente OnlyPay) faz a compra junto ao time comercial e solicita o envio para o endereço desejado. Esse envio gera um <strong>código de rastreio</strong> que é compartilhado com o premiado.</p>
+          <p>Atualmente, o premiado recebe um <strong>WhatsApp</strong> com o código de rastreio assim que o cartão é postado.</p>
+          <p>Assim que o cartão chegar, você deverá acessar o aplicativo OnlyPay para fazer o desbloqueio.</p>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Não recebi o código de rastreio. Como faço para acompanhar?</summary>
+        <div class="faq-body">
+          <p>Caso não tenha recebido o código de rastreio do seu cartão físico, entre em contato com a nossa central de atendimento para que possamos compartilhar o código atualizado com você.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- ========== APP ========== -->
+    <section class="category" id="app">
+      <div class="category-header">
+        <span class="category-icon">03</span>
+        <h2>App e primeiro acesso</h2>
+      </div>
+
+      <details class="faq">
+        <summary>Como acesso o app pela primeira vez?</summary>
+        <div class="faq-body">
+          <ol>
+            <li>Baixe o app da OnlyPay (Google Play ou App Store);</li>
+            <li>Clique em <strong>"primeiro acesso"</strong>;</li>
+            <li>Faça seu cadastro conforme orientações;</li>
+            <li>Crie uma senha de sua preferência, respeitando os critérios de segurança;</li>
+            <li>Faça sua selfie e envie a foto/arquivo digital original dos seus documentos pessoais dentro da validade.</li>
+          </ol>
+          <div class="warn"><strong>Atenção — informações importantes!</strong> O documento deve ser <strong>original, dentro da validade, legível e sem rasuras</strong>. Confirme que não há reflexo de luz sobre os dados pessoais ou foto. <strong>Não são aceitas</strong> fotos de cópias dos documentos ou de telas — caso seja feito, será reprovado automaticamente. Para a selfie, escolha um ambiente com fundo sólido e bem iluminado. Para CPF pendente de regularização, o processo é bloqueado até que a pendência seja resolvida com a Receita Federal.</div>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>O que posso fazer no app OnlyPay?</summary>
+        <div class="faq-body">
+          <ul>
+            <li>Desbloqueio e bloqueio de conta/cartão;</li>
+            <li>Solicitação de segunda via de cartão;</li>
+            <li>Consulta de saldo e controle de despesas;</li>
+            <li>TED;</li>
+            <li>Pagamento de boletos;</li>
+            <li>Recarga de celular;</li>
+            <li>Atualização de dados cadastrais.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Onde posso usar o cartão físico?</summary>
+        <div class="faq-body">
+          <ul>
+            <li>Compras em lojas físicas;</li>
+            <li>Compras em lojas online;</li>
+            <li>Plataformas de serviços (iFood, Uber, 99, entre outros);</li>
+            <li>Saque em terminais eletrônicos do <strong>Banco24Horas</strong> e Rede Plus.</li>
+          </ul>
+          <div class="note">Lembre-se de consultar a particularidade de cada cartão: nem todos têm saque ou TED disponível.</div>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Não consigo acessar o app, o que faço?</summary>
+        <div class="faq-body">
+          <ol>
+            <li>Verifique se você está conectado em uma <strong>rede de internet pessoal</strong> (Wifi ou 4G). Redes corporativas geralmente bloqueiam o acesso ao nosso app.</li>
+            <li>Verifique se a versão do app está atualizada. Caso não esteja, atualize e tente novamente.</li>
+          </ol>
+          <p>Se mesmo seguindo esses passos não funcionar, tente acessar pelo site: <a href="http://www.onlypay.com.br" target="_blank">www.onlypay.com.br</a>.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- ========== DESBLOQUEIO ========== -->
+    <section class="category" id="desbloqueio">
+      <div class="category-header">
+        <span class="category-icon">04</span>
+        <h2>Desbloqueio e senha</h2>
+      </div>
+
+      <details class="faq">
+        <summary>Como desbloqueio meu cartão?</summary>
+        <div class="faq-body">
+          <p>Acesse o aplicativo com login e senha e clique no botão <strong>"Desbloquear"</strong> exibido sobre o cartão na tela inicial. O cartão será liberado para uso após essa ação.</p>
+          <p><strong>Caso não consiga pelo app</strong>, faça o desbloqueio pelo site:</p>
+          <ol>
+            <li>Acesse <a href="http://www.onlypay.com.br" target="_blank">www.onlypay.com.br</a> e clique em "desbloquear cartão";</li>
+            <li>Preencha a tela de cadastro inicial e clique em "verificar";</li>
+            <li>Você será direcionado para realizar o cadastro com suas informações pessoais;</li>
+            <li>Quando o cadastro for finalizado, o desbloqueio é considerado feito. O saldo ficará disponível em até <strong>48 horas úteis</strong>, desde que a empresa tenha concluído a liberação do pagamento.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Como crio a senha do cartão físico?</summary>
+        <div class="faq-body">
+          <ol>
+            <li>Acesse a opção <strong>"Início"</strong> e clique no seu cartão;</li>
+            <li>Vá em <strong>"Configurações"</strong> e selecione <strong>"Alterar senha"</strong>;</li>
+            <li>Digite a senha de acesso ao app (10 dígitos);</li>
+            <li>Escolha a nova senha do cartão (4 dígitos).</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Esqueci a senha de acesso. Como recupero?</summary>
+        <div class="faq-body">
+          <ol>
+            <li>Acesse o app;</li>
+            <li>Selecione a opção <strong>"faça seu login"</strong>;</li>
+            <li>Clique em <strong>"Esqueci minha senha"</strong>;</li>
+            <li>Insira seus dados e siga as instruções para criar uma nova senha. Você receberá um <strong>código de autenticação de 2 fatores</strong> (SMS e e-mail).</li>
+          </ol>
+          <div class="note"><strong>Importante:</strong> verifique se seu e-mail e telefone cadastrados estão corretos para receber o código de autenticação.</div>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Bloqueei a senha do cartão por tentativas erradas. O que faço?</summary>
+        <div class="faq-body">
+          <p>Entre em contato com a central da OnlyPay para solicitar o desbloqueio. A central confirmará alguns dados pessoais antes de proceder com a alteração.</p>
+          <p><strong>Dados que serão confirmados (Pessoa Física):</strong></p>
+          <ul>
+            <li>Data de nascimento;</li>
+            <li>Nome completo da mãe;</li>
+            <li>Empresa responsável pela campanha do cartão.</li>
+          </ul>
+          <p><strong>Dados que serão confirmados (Pessoa Jurídica):</strong></p>
+          <ul>
+            <li>E-mail;</li>
+            <li>Número de telefone celular;</li>
+            <li>Nome da empresa.</li>
+          </ul>
+          <p>Após o desbloqueio, acesse o aplicativo e crie uma nova senha para seu cartão.</p>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Perdi, foi furtado ou roubaram meu cartão. Como bloqueio?</summary>
+        <div class="faq-body">
+          <p><strong>Opção 1 — pelo app:</strong> faça login, clique em <strong>"Configurações"</strong> e depois em <strong>"Bloquear Cartão"</strong>.</p>
+          <p><strong>Opção 2 — pelo site:</strong> acesse <a href="http://www.onlypay.com.br" target="_blank">www.onlypay.com.br</a>, faça login e, na área logada, clique na opção <strong>"Bloquear"</strong> exibida sobre o cartão.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- ========== SALDO ========== -->
+    <section class="category" id="saldo">
+      <div class="category-header">
+        <span class="category-icon">05</span>
+        <h2>Saldo e despesas</h2>
+      </div>
+
+      <details class="faq">
+        <summary>Onde vejo o saldo do meu cartão?</summary>
+        <div class="faq-body">
+          <p><strong>Pelo app:</strong> acesse o app da OnlyPay e clique no <strong>olhinho</strong> sob seu cartão.</p>
+          <p><strong>Pelo site:</strong> acesse o site OnlyPay na área logada e clique em <strong>"meus cartões"</strong>.</p>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Onde consulto minhas despesas?</summary>
+        <div class="faq-body">
+          <p><strong>Pelo app:</strong> na tela inicial, toque no botão <strong>"Despesas"</strong> para visualizar todos os lançamentos.</p>
+          <p><strong>Pelo site:</strong> após login, clique em <strong>"minhas despesas"</strong> no menu do lado esquerdo da tela.</p>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Não consigo usar meu saldo. O que pode estar acontecendo?</summary>
+        <div class="faq-body">
+          <ol>
+            <li>Verifique se o saldo está disponível na conta — ele leva até <strong>48 horas após o desbloqueio</strong> para ser liberado.</li>
+            <li>A maquininha pode cancelar a operação por suspeita de fraude. Verifique o caso com o estabelecimento ou tente em outro momento/local.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Não reconheço uma compra no meu cartão. Como contesto?</summary>
+        <div class="faq-body">
+          <p>Caso não reconheça uma operação, você deverá realizar a contestação pelos canais de atendimento OnlyPay, seguindo as orientações dos Termos e Condições de Uso.</p>
+          <div class="warn"><strong>Atenção:</strong> a bandeira do cartão <strong>não aceita</strong> contestações feitas após <strong>120 dias</strong> da compra realizada e/ou para valores abaixo de <strong>R$ 25,00</strong>.</div>
+        </div>
+      </details>
+    </section>
+
+    <!-- ========== OPERAÇÕES ========== -->
+    <section class="category" id="operacoes">
+      <div class="category-header">
+        <span class="category-icon">06</span>
+        <h2>TED, boletos e recargas</h2>
+      </div>
+
+      <details class="faq">
+        <summary>Como faço uma TED? (Cartões compra e saque)</summary>
+        <div class="faq-body">
+          <p><strong>Pelo app:</strong></p>
+          <ol>
+            <li>Acesse o app com seus dados;</li>
+            <li>Clique no ícone de <strong>"TED"</strong>;</li>
+            <li>Preencha as informações bancárias para transferência;</li>
+            <li>Confira todos os dados com atenção;</li>
+            <li>Clique no botão <strong>"Transferir"</strong> para concluir.</li>
+          </ol>
+          <p><strong>Pelo site:</strong></p>
+          <ol>
+            <li>Clique em <strong>"Transferência"</strong>;</li>
+            <li>Escolha o cartão do qual deseja transferir o saldo;</li>
+            <li>Preencha os dados do beneficiário;</li>
+            <li>Informe o valor;</li>
+            <li>Confira tudo e clique em <strong>"Transferir"</strong>.</li>
+          </ol>
+          <div class="warn"><strong>Importante:</strong> se os dados bancários forem preenchidos incorretamente e você clicar em "Transferir", será cobrada uma taxa por <strong>"transação negada"</strong>. Para o valor da taxa, consulte a descrição do produto vinculado ao seu cartão.</div>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Quais os horários e regras para TED?</summary>
+        <div class="faq-body">
+          <ul>
+            <li>TEDs solicitadas em dias úteis até as <strong>14:59</strong> ficam disponíveis até as <strong>17h do mesmo dia</strong>;</li>
+            <li>Transferências fora desse horário ficam disponíveis no próximo dia útil;</li>
+            <li><strong>Não é permitida</strong> transferência para conta salário ou contas de investimento;</li>
+            <li><strong>Não é permitido</strong> agendar pagamento de boletos/TED.</li>
+          </ul>
+          <div class="note">Sempre confira suas transações em <strong>"minhas despesas"</strong>.</div>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Posso transferir saldo entre cartões? (P2P)</summary>
+        <div class="faq-body">
+          <p>Sim, mas apenas entre <strong>cartões PJ Compra e Saque</strong>. A transferência só pode ser feita de um cartão PJ compra e saque para outro cartão PJ.</p>
+          <p><strong>Pelo site:</strong></p>
+          <ol>
+            <li>Clique em <strong>"Transferência entre cartões"</strong> (no menu lateral esquerdo);</li>
+            <li>Escolha o cartão de origem;</li>
+            <li>Preencha os dados do cartão que receberá o saldo;</li>
+            <li>Informe o valor;</li>
+            <li>Confira e clique em <strong>"Transferir"</strong>.</li>
+          </ol>
+          <div class="note">A funcionalidade pelo app ainda está em desenvolvimento.</div>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Como pago boletos pelo app?</summary>
+        <div class="faq-body">
+          <ol>
+            <li>Faça login no aplicativo;</li>
+            <li>Na tela inicial, toque em <strong>"Boletos"</strong>;</li>
+            <li>Aparecerá uma mensagem sobre os horários de pagamento — clique em <strong>"Continuar"</strong>;</li>
+            <li>Escolha o cartão que deseja usar;</li>
+            <li>Selecione como inserir o código: <strong>leitor de código de barras</strong> ou <strong>digitar manualmente</strong>;</li>
+            <li>Toque em <strong>"Pagar"</strong>.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Como pago boletos pelo site?</summary>
+        <div class="faq-body">
+          <ol>
+            <li>Clique em <strong>"Pagamentos"</strong> (menu lateral esquerdo);</li>
+            <li>Escolha o cartão para o pagamento;</li>
+            <li>Digite o código de barras e o valor do boleto;</li>
+            <li>Confira tudo e clique em <strong>"Pagar"</strong>.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Como faço recarga de celular?</summary>
+        <div class="faq-body">
+          <p><strong>Pelo app:</strong></p>
+          <ol>
+            <li>Acesse o app com seus dados;</li>
+            <li>Clique no ícone de <strong>"Recarga"</strong>;</li>
+            <li>Selecione o cartão com saldo e prossiga;</li>
+            <li>Selecione a operadora e informe o número de celular;</li>
+            <li>Selecione o valor da recarga e prossiga;</li>
+            <li>Confirme os dados e clique em <strong>"Recarregar Celular"</strong>.</li>
+          </ol>
+          <p><strong>Pelo site:</strong></p>
+          <ol>
+            <li>Clique em <strong>"Recarga de celular"</strong> (menu lateral esquerdo);</li>
+            <li>Escolha o cartão;</li>
+            <li>Digite as informações solicitadas (número, operadora e valor);</li>
+            <li>Confira e clique em <strong>"Recarregar Celular"</strong>.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Quais são os limites operacionais e tarifas gerais?</summary>
+        <div class="faq-body">
+          <p><strong>Limites:</strong></p>
+          <ul>
+            <li>Compras em lojas físicas: limite máximo diário de <strong>R$ 10.000,00</strong> por estabelecimento;</li>
+            <li>Compras online: limite máximo diário de <strong>R$ 2.000,00</strong> por estabelecimento;</li>
+            <li>TED: limite máximo diário de <strong>R$ 10.000,00</strong> por transação;</li>
+            <li>Pagamento de boletos: limite máximo de <strong>R$ 30.000,00</strong> por mês;</li>
+            <li>Saque: <strong>3 saques diários</strong>, totalizando até <strong>R$ 6.000,00</strong> por dia (observar o limite do caixa eletrônico).</li>
+          </ul>
+          <p><strong>Tarifas (cartões padrão):</strong></p>
+          <ul>
+            <li>Mensalidade: R$ 4,00 (PF) / R$ 8,00 (PJ);</li>
+            <li>TED: R$ 5,00 por transação;</li>
+            <li>Pagamento de boleto: R$ 1,00 por transação;</li>
+            <li>Saque: R$ 9,50 por transação;</li>
+            <li>Saque negado: R$ 3,50.</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <!-- ========== PROBLEMAS ========== -->
+    <section class="category" id="problemas">
+      <div class="category-header">
+        <span class="category-icon">07</span>
+        <h2>Problemas com o cartão</h2>
+      </div>
+
+      <details class="faq">
+        <summary>Por que minha conta foi bloqueada por "tentativas suspeitas"?</summary>
+        <div class="faq-body">
+          <p>Quando o sistema detecta um comportamento suspeito, o acesso é travado automaticamente para proteção. Os principais motivos são:</p>
+          <ul>
+            <li>Várias tentativas de TED em sequência;</li>
+            <li>Várias tentativas de TED com informações erradas (agência, dígito da conta etc.);</li>
+            <li>Várias tentativas de pagar o mesmo boleto;</li>
+            <li>Erros consecutivos no recebimento de SMS;</li>
+            <li>Vários aparelhos conectados.</li>
+          </ul>
+          <p>Para liberar o acesso, entre em contato com a central de atendimento OnlyPay.</p>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Tenho saldo, mas a compra está dando erro. O que pode ser?</summary>
+        <div class="faq-body">
+          <p>Algumas possibilidades:</p>
+          <ul>
+            <li>A compra foi <strong>barrada pelo antifraude</strong> (motivos diversos — analisamos caso a caso);</li>
+            <li>Bloqueio por <strong>suspeita de compra</strong> (Falcon);</li>
+            <li>Limite de compras online insuficiente — pode ser solicitado aumento.</li>
+          </ul>
+          <p>Entre em contato com a central de atendimento para que possamos analisar e abrir um chamado com a processadora, se necessário.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- ========== CADASTRO ========== -->
+    <section class="category" id="cadastro">
+      <div class="category-header">
+        <span class="category-icon">08</span>
+        <h2>Dados cadastrais</h2>
+      </div>
+
+      <details class="faq">
+        <summary>Meus dados estão errados ou desatualizados. Como altero?</summary>
+        <div class="faq-body">
+          <p>Você pode alterar seus dados diretamente:</p>
+          <p><strong>Pelo app:</strong> clique em <strong>"Eu"</strong> no canto inferior direito, escolha o dado que quer alterar (e-mail, telefone, endereço).</p>
+          <p><strong>Pelo site:</strong> na área logada, clique em <strong>"meus dados"</strong> e escolha o que deseja alterar (apenas celular e endereço estão disponíveis pelo site).</p>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Não tenho mais acesso ao meu e-mail nem ao telefone cadastrado. Como faço?</summary>
+        <div class="faq-body">
+          <p>Solicite a alteração diretamente pela central de atendimento OnlyPay. Você precisará enviar:</p>
+          <ul>
+            <li>Foto do <strong>RG</strong> ou <strong>CNH</strong> (expedição em até 10 anos);</li>
+            <li>Nome da empresa que forneceu o prêmio;</li>
+            <li>6 últimos dígitos do cartão;</li>
+            <li>E-mail e número de telefone com DDD para os novos contatos.</li>
+          </ul>
+          <div class="note">Antes de fazer as atualizações, a central confirmará a legitimidade do favorecido.</div>
+        </div>
+      </details>
+    </section>
+
+    <!-- ========== PONTOS ========== -->
+    <section class="category" id="pontos">
+      <div class="category-header">
+        <span class="category-icon">09</span>
+        <h2>Plataformas de pontos (Hiper Prêmios, Stoller e Pontos Only)</h2>
+      </div>
+
+      <details class="faq">
+        <summary>Como funcionam as plataformas de gamificação Hoya e Stoller?</summary>
+        <div class="faq-body">
+          <p>Os clientes Hoya e Stoller (Corteva) possuem plataformas personalizadas onde os funcionários e parceiros acompanham metas de vendas. Quando as metas são alcançadas, eles ganham <strong>pontos</strong> nas plataformas <strong>Hiper Prêmios</strong> (Hoya) ou <strong>Stoller</strong>.</p>
+          <p><strong>Como os pontos são inseridos:</strong></p>
+          <ul>
+            <li><strong>Hiper Prêmios (Hoya):</strong> a empresa envia um código (token) para o premiado, que insere manualmente na plataforma;</li>
+            <li><strong>Stoller:</strong> os pontos são inseridos manualmente pelo administrador da empresa.</li>
+          </ul>
+          <p><strong>Os pontos podem ser trocados por:</strong></p>
+          <ul>
+            <li>Itens do catálogo OnlyPay (produtos);</li>
+            <li>Recarga de celular;</li>
+            <li>Cartão pré-pago OnlyPay;</li>
+            <li>Voucher físico ou virtual (Vale Presente);</li>
+            <li>Pagamento de contas de consumo.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Como faço meu cadastro nas plataformas Hiper Prêmios ou Stoller?</summary>
+        <div class="faq-body">
+          <ol>
+            <li>Acesse o site informado pela sua empresa:
+              <ul>
+                <li>Hiper Prêmios: <a href="https://hiperpremios.com.br/" target="_blank">hiperpremios.com.br</a></li>
+                <li>Stoller Grow: <a href="https://grow2025.grow.agr.br/" target="_blank">grow2025.grow.agr.br</a></li>
+              </ul>
+            </li>
+            <li>Clique em <strong>"Primeiro acesso"</strong>;</li>
+            <li>Insira o <strong>CPF</strong> e o <strong>CNPJ da empresa</strong> da qual está participando;</li>
+            <li>Aguarde a aprovação do administrador da plataforma para concluir o cadastro.</li>
+          </ol>
+          <p>No caso da Hiper Prêmios, também é possível acessar pelo app "Hiper Prêmios" (Google Play e App Store).</p>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Como insiro meus pontos na plataforma Hiper Prêmios (Hoya)?</summary>
+        <div class="faq-body">
+          <ol>
+            <li>Acesse a plataforma Hiper Prêmios;</li>
+            <li>Insira seu CPF e senha;</li>
+            <li>Na área logada, clique em <strong>"Insira seus pontos"</strong> no menu lateral esquerdo;</li>
+            <li>Selecione a opção (token ou selo) e salve.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Como resgato meus pontos no Hiper Prêmios?</summary>
+        <div class="faq-body">
+          <p><strong>Para compra no catálogo de produtos:</strong></p>
+          <ol>
+            <li>Acesse a plataforma Hiper Prêmios;</li>
+            <li>Insira seu CPF e senha;</li>
+            <li>Clique em <strong>"Resgate seus pontos"</strong> no menu lateral esquerdo;</li>
+            <li>Selecione o item de acordo com sua pontuação.</li>
+          </ol>
+          <p><strong>Para troca por Cartão OnlyPay, vouchers, pagamento de contas e recarga de celular:</strong> ao abrir a tela de resgate, observe os banners superiores. Cada bolinha branca representa uma ação. Clique na imagem correspondente ao que deseja resgatar.</p>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Quais são as regras para pagamento de boleto pelo Hiper Prêmios ou Stoller?</summary>
+        <div class="faq-body">
+          <p><strong>São aceitos:</strong></p>
+          <ul>
+            <li>Contas de consumo (água, luz, gás, telefone) e outras concessionárias conveniadas;</li>
+            <li>Contas com código de barras.</li>
+          </ul>
+          <p><strong>Não são aceitos:</strong></p>
+          <ul>
+            <li>GPS — Guia da Previdência Social.</li>
+          </ul>
+          <div class="note"><strong>Hoya tem limite de pagamento de boleto de R$ 150,00 por mês.</strong></div>
+          <div class="warn">
+            <p><strong>Importante:</strong></p>
+            <ul>
+              <li>Pagamentos em feriados/fins de semana são processados no próximo dia útil;</li>
+              <li>A conta só é considerada paga após confirmação do status do pedido;</li>
+              <li>Se o status indicar <strong>erro</strong>, o pagamento não foi efetivado e os pontos serão devolvidos em até <strong>24 horas</strong>;</li>
+              <li>Recomendamos pagar com pelo menos <strong>1 dia de antecedência</strong> ao vencimento;</li>
+              <li>É responsabilidade exclusiva do premiado preencher corretamente as informações.</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Como altero meus dados pessoais nas plataformas Hoya e Stoller?</summary>
+        <div class="faq-body">
+          <p>Clique nos <strong>três pontinhos</strong> ao lado do nome (abaixo do menu lateral esquerdo) e acesse <strong>"meu perfil"</strong>. Lá você pode alterar diversas informações.</p>
+          <div class="note">Não é possível alterar <strong>nome</strong> e <strong>CPF</strong> pela plataforma.</div>
+          <div class="warn">Para premiados <strong>Hoya</strong>: o atendimento é interno do cliente. A central OnlyPay pode auxiliar com dúvidas simples sobre resgates ou extrato de pontos, mas <strong>qualquer alteração cadastral deve ser direcionada à Hoya</strong>.</div>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Como acompanho a entrega de um produto que resgatei?</summary>
+        <div class="faq-body">
+          <p>Assim que você solicita o resgate, aparece um novo item no menu chamado <strong>"Meus Pedidos"</strong>. Clique em <strong>"Ver detalhes"</strong> para acompanhar o rastreio.</p>
+          <p>Caminho: <strong>Menu → Meus Pedidos → Ver Detalhes</strong>.</p>
+          <div class="note">Quando o premiado realiza um resgate, ele é automaticamente atrelado ao catálogo Pontos Only. Para entregas de produtos das Casas Bahia, a OnlyPay pode acompanhar o status pelo Portal de Parceiros, mas não tem acesso ao código de rastreio direto.</div>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>O que é o Pontos Only?</summary>
+        <div class="faq-body">
+          <p>Para clientes sem personalização, o <strong>Pontos Only</strong> é o catálogo de pontos padrão com a identidade visual da OnlyPay.</p>
+          <p><strong>Como funciona:</strong> o cliente determina metas ou critérios internos que valem pontos como recompensa. O premiado pode resgatar com base nos pontos acumulados.</p>
+          <p><strong>Primeiro acesso:</strong></p>
+          <ol>
+            <li>Você recebe um e-mail com sua <strong>senha temporária</strong>;</li>
+            <li>Acesse a plataforma: <a href="https://catalogo.pontosonly.com.br/login" target="_blank">catalogo.pontosonly.com.br/login</a>.</li>
+          </ol>
+          <p><strong>Funcionalidades disponíveis ao logar:</strong> Homepage, Dados Cadastrais, Troca de Senha, Extrato de Pontos, Pedidos Realizados, Pontos Expirados, Regulamento da Campanha, FAQ e Fale Conosco.</p>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Quais produtos posso resgatar com meus pontos no Pontos Only?</summary>
+        <div class="faq-body">
+          <ul>
+            <li>Produtos de lojas parceiras (mais de 60 parceiros, como Boticário, Casas Bahia etc.);</li>
+            <li>Vouchers (físicos ou virtuais);</li>
+            <li>Cartão OnlyPay;</li>
+            <li>Recarga de celular;</li>
+            <li>Pagamento de contas e boletos.</li>
+          </ul>
+          <div class="note">A vantagem do <strong>Cartão Compra e Saque OnlyPay</strong> é que possibilita saques em terminais 24 horas.</div>
+        </div>
+      </details>
+    </section>
+
+    <!-- ========== PRESENTES ========== -->
+    <section class="category" id="presentes">
+      <div class="category-header">
+        <span class="category-icon">10</span>
+        <h2>Only Presentes</h2>
+      </div>
+
+      <details class="faq">
+        <summary>O que é o Only Presentes e como uso?</summary>
+        <div class="faq-body">
+          <p>O Only Presentes é a plataforma onde você resgata vouchers e cartões-presente.</p>
+          <ol>
+            <li>Acesse: <a href="https://www.oppresentes.com.br" target="_blank">oppresentes.com.br</a>;</li>
+            <li>Preencha as informações de cadastro inicial e faça login;</li>
+            <li>Selecione a empresa que está oferecendo a premiação;</li>
+            <li>Clique em <strong>"Resgate seu código aqui"</strong> e preencha as informações recebidas pela empresa;</li>
+            <li>Clique em <strong>"Resgatar"</strong>.</li>
+          </ol>
+          <p>O saldo aparecerá disponível no Only Presentes, e você poderá escolher como usá-lo.</p>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Como uso meu saldo no Only Presentes para escolher um voucher?</summary>
+        <div class="faq-body">
+          <ol>
+            <li>Na página inicial, escolha a opção <strong>"Cartões Presentes"</strong>;</li>
+            <li>Você será direcionado para a lista de parceiros — selecione o voucher desejado;</li>
+            <li>Clique no carrinho à direita e finalize a compra.</li>
+          </ol>
+          <p>O voucher chegará no seu e-mail em até <strong>8 dias úteis</strong>.</p>
+          <div class="note">Alguns parceiros oferecem voucher físico — nesse caso, há um custo adicional de <strong>R$ 20,48</strong> referente ao envio. Você deverá informar o endereço no momento da compra.</div>
+        </div>
+      </details>
+    </section>
+
+    <!-- ========== TÉCNICO ========== -->
+    <section class="category" id="tecnico">
+      <div class="category-header">
+        <span class="category-icon">11</span>
+        <h2>Suporte técnico</h2>
+      </div>
+
+      <details class="faq">
+        <summary>Como faço a limpeza de cache do navegador? (Chrome no computador)</summary>
+        <div class="faq-body">
+          <p>Para corrigir erros de carregamento ou formatação, é recomendável limpar o cache do navegador:</p>
+          <ol>
+            <li>No canto superior direito, clique no ícone de <strong>três pontos</strong>;</li>
+            <li>Selecione <strong>"Configurações"</strong>;</li>
+            <li>Acesse <strong>"Privacidade e segurança"</strong>;</li>
+            <li>Clique em <strong>"Remover dados de navegação"</strong>.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Como limpo o cache do Chrome no celular?</summary>
+        <div class="faq-body">
+          <ol>
+            <li>No canto superior direito, clique no ícone de <strong>três pontos</strong>;</li>
+            <li>Selecione <strong>"Histórico"</strong>;</li>
+            <li>Clique em <strong>"Remover dados de navegação"</strong>;</li>
+            <li>Por fim, clique em <strong>"Remover dados"</strong>.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Como limpo o cache no iPhone (Safari)?</summary>
+        <div class="faq-body">
+          <p>O iPhone não tem um botão direto de "limpar cache" como o Android. Para o Safari:</p>
+          <ol>
+            <li>Vá em <strong>"Ajustes"</strong>;</li>
+            <li>Encontre o <strong>"Safari"</strong>;</li>
+            <li>Toque em <strong>"Apagar histórico e dados dos sites"</strong>.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Limpei o cache e ainda não consigo acessar. O que faço?</summary>
+        <div class="faq-body">
+          <p>Tente acessar por uma <strong>guia anônima</strong>:</p>
+          <ul>
+            <li><strong>Pelo computador:</strong> pressione <code>Ctrl + Shift + N</code>;</li>
+            <li><strong>Pelo celular:</strong> abra o navegador, clique nos 3 pontinhos no canto superior e selecione <strong>"Nova guia anônima"</strong>.</li>
+          </ul>
+          <p>Verifique também se você não está em uma rede corporativa que possa estar bloqueando o acesso.</p>
+        </div>
+      </details>
+    </section>
+
+  </div>
+</main>
+</div>
+
+<footer>
+  <div class="container">
+    Central de Ajuda OnlyPay · Última atualização: 13/03/2026
+  </div>
+</footer>
+
+<script>
+  // ========== Search ==========
+  const searchInput = document.getElementById('search');
+  const allFaqs = document.querySelectorAll('.faq');
+  const allCategories = document.querySelectorAll('.category');
+  const noResults = document.getElementById('results-msg');
+
+  function normalize(str) {
+    return str.toLowerCase()
+              .normalize('NFD')
+              .replace(/[\u0300-\u036f]/g, '');
+  }
+
+  function highlightText(element, term) {
+    // Remove existing highlights
+    element.querySelectorAll('mark').forEach(m => {
+      const parent = m.parentNode;
+      parent.replaceChild(document.createTextNode(m.textContent), m);
+      parent.normalize();
+    });
+
+    if (!term) return;
+
+    const normalizedTerm = normalize(term);
+    const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null);
+    const textNodes = [];
+    let node;
+    while (node = walker.nextNode()) {
+      if (node.parentElement.tagName !== 'SCRIPT' && node.parentElement.tagName !== 'STYLE') {
+        textNodes.push(node);
+      }
+    }
+
+    textNodes.forEach(textNode => {
+      const text = textNode.textContent;
+      const normalizedText = normalize(text);
+      if (normalizedText.includes(normalizedTerm)) {
+        const idx = normalizedText.indexOf(normalizedTerm);
+        if (idx >= 0) {
+          const before = text.substring(0, idx);
+          const match = text.substring(idx, idx + term.length);
+          const after = text.substring(idx + term.length);
+          const span = document.createElement('span');
+          span.innerHTML = `${before}<mark>${match}</mark>${after}`;
+          textNode.parentNode.replaceChild(span, textNode);
+        }
+      }
+    });
+  }
+
+  searchInput.addEventListener('input', (e) => {
+    const term = e.target.value.trim();
+    const normTerm = normalize(term);
+    let anyVisible = false;
+
+    allFaqs.forEach(faq => {
+      const text = normalize(faq.textContent);
+      if (!normTerm || text.includes(normTerm)) {
+        faq.classList.remove('hidden');
+        if (normTerm) faq.setAttribute('open', '');
+        else faq.removeAttribute('open');
+        anyVisible = true;
+      } else {
+        faq.classList.add('hidden');
+        faq.removeAttribute('open');
+      }
+    });
+
+    // Hide categories with no visible faqs
+    allCategories.forEach(cat => {
+      const visibleFaqs = cat.querySelectorAll('.faq:not(.hidden)');
+      if (visibleFaqs.length === 0 && normTerm) {
+        cat.classList.add('hidden');
+      } else {
+        cat.classList.remove('hidden');
+      }
+    });
+
+    noResults.classList.toggle('show', !anyVisible && term.length > 0);
+  });
+
+  // ========== Sidebar active link ==========
+  const navLinks = document.querySelectorAll('.sidebar a');
+  const sections = document.querySelectorAll('section.category');
+
+  function updateActiveLink() {
+    let current = '';
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 120) current = section.id;
+    });
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('data-target') === current);
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveLink);
+  updateActiveLink();
+
+  // Smooth scroll for sidebar
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.getElementById(link.getAttribute('data-target'));
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop - 16,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
